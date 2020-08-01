@@ -1,0 +1,37 @@
+Usage:
+  edgectl [command]
+
+Management Commands:
+  install           Install the Ambassador Edge Stack in your cluster
+  login             Log in to the Ambassador Edge Policy Console
+  license           Set or update the Ambassador Edge Stack license key
+
+Development Commands:
+  status            Show connectivity status
+  connect           Connect to a cluster
+  disconnect        Disconnect from the connected cluster
+  intercept         Manage deployment intercepts
+  avail             Interceptable deployments
+  list              Intercepts in progress/running
+
+Advanced Commands:
+  daemon            Launch Edge Control Daemon in the background (sudo)
+  pause             Turn off network overrides (to use a VPN)
+  resume            Turn network overrides on (after using edgectl pause)
+  quit              Tell Edge Control Daemon to quit (for upgrades)
+  remove            Remove/Disconnect from intercept
+
+Other Commands:
+  version           Show program's version number and exit
+  help              Help about any command
+
+
+
+  
+  add -> 
+  add = available service to intercept
+  -n = name of intercept 
+  -m = match  if value exists intercept
+  -t = target service
+
+  edgectl intercept add hello -n example -m x-dev=$USER -t localhost:9000
